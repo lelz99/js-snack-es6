@@ -23,13 +23,12 @@ const invited = guests.forEach((vip, i) => {
 })
 console.log(guestsList)
 
+console.log('--------------------------------------------------------------')
+console.log('--------------------------------------------------------------')
+console.log('--------------------------------------------------------------')
 
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-console.log('--------------------------------------------------------------')
-console.log('--------------------------------------------------------------')
-console.log('--------------------------------------------------------------')
+
+
 // Snack 2
 
 const infoStudents = [
@@ -77,3 +76,94 @@ const idPromoted = infoStudents.filter(({id,grades}) => id >= 120 && grades >= 7
 console.log(idPromoted)
 
 const plate = infoStudents.forEach(({name}) => console.log(name.toUpperCase()))
+
+
+
+console.log('--------------------------------------------------------------')
+console.log('--------------------------------------------------------------')
+console.log('--------------------------------------------------------------')
+
+
+// Snack 3
+
+const bicycles = [
+    {
+        name : 'Cycloc',
+        weight : 10,
+    },
+    {
+        name : 'Fidlock',
+        weight : 8,
+    },
+    {
+        name : 'Funkita',
+        weight : 12,
+    },
+    {
+        name : 'Exped',
+        weight : 17,
+    },
+    {
+        name : 'Ergon',
+        weight : 15,
+    },
+]
+
+console.log(bicycles)
+
+let lighterBike = bicycles[0]
+
+bicycles.forEach(bike => {
+    const {weight} = bike
+    if (weight < lighterBike.weight) lighterBike = bike
+})
+
+console.log(lighterBike)
+
+console.log('--------------------------------------------------------------')
+console.log('--------------------------------------------------------------')
+console.log('--------------------------------------------------------------')
+
+// Snack 4
+
+const teams = [
+    {
+        team : 'Roma',
+        points : 0,
+        fouls : 0, 
+    },
+    {
+        team : 'Lazio',
+        points : 0,
+        fouls : 0, 
+    },
+    {
+        team : 'Inter',
+        points : 0,
+        fouls : 0, 
+    },
+    {
+        team : 'Fiorentina',
+        points : 0,
+        fouls : 0, 
+    },
+    {
+        team : 'Empoli',
+        points : 0,
+        fouls : 0, 
+    },
+]
+
+console.log(teams)
+
+const getRandomNumbers = (min, max) => Math.floor(Math.random() * (min - max + 1) + max);
+
+teams.forEach (team => {
+    team.points = getRandomNumbers(0, 100)
+    team.fouls = getRandomNumbers(0, 100)
+})
+
+console.log(teams)
+
+const newTeams = teams.map(({team, fouls}) => ({team, fouls}))
+console.log(newTeams)
